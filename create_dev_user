@@ -1,9 +1,9 @@
 #!/bin/sh
 
-SUBDOMAIN="dev"
-PASSWORD="pass"
-ADMIN_PASSWORD="pass"
-EMAIL="dev@example.com"
+SUBDOMAIN="exponent"
+PASSWORD="exponent"
+ADMIN_PASSWORD="exponent"
+EMAIL="exponent@localhost"
 
 echo "--- Creating databases"
 bundle exec rake cartodb:db:setup --trace SUBDOMAIN="${SUBDOMAIN}" \

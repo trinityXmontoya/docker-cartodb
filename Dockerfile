@@ -33,7 +33,8 @@ RUN apt-get install -y -q build-essential checkinstall unp zip libgeos-c1 \
       libsqlite3-dev sqlite3 libxml2-dev libxslt-dev autoconf \
       libc6-dev ncurses-dev automake libtool bison subversion \
       pkg-config libpq5 libpq-dev libcurl4-gnutls-dev libffi-dev \
-      libgdbm-dev gnupg libreadline6-dev 
+      libgdbm-dev gnupg libreadline6-dev libcairo2-dev libjpeg8-dev \
+      libpango1.0-dev libgif-dev
 
 # Setting PostgreSQL
 RUN sed -i 's/\(peer\|md5\)/trust/' /etc/postgresql/9.3/main/pg_hba.conf
@@ -50,7 +51,7 @@ RUN service postgresql start && /bin/su postgres -c \
       /tmp/template_postgis.sh && service postgresql stop
 
 # Install cartodb extension
-RUN git clone --branch 0.5.1 https://github.com/CartoDB/cartodb-postgresql && \
+RUN git clone --branch 0.7.3 https://github.com/CartoDB/cartodb-postgresql && \
       cd cartodb-postgresql && \
       PGUSER=postgres make install
 ADD ./cartodb_pgsql.sh /tmp/cartodb_pgsql.sh
