@@ -1,7 +1,7 @@
 var config = {
      environment: 'development'
     ,port: 8181
-    ,host: '127.0.0.1'
+    ,host: '0.0.0.0'
     ,uv_threadpool_size: undefined
     // Regular expression pattern to extract username
     // from hostname. Must have a single grabbing block.
@@ -130,7 +130,7 @@ var config = {
         // The "domain" part will be appended to 
         // the cartodb username and passed to
         // SQL-API requests in the Host HTTP header
-        domain: 'localhost',
+        domain: 'cartodb.localhost',
         version: 'v1',
         // Maximum lenght of SQL query for GET
         // requests. Longer queries will be sent
