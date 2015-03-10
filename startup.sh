@@ -2,7 +2,7 @@
 
 PORT=3000
 
-echo "127.0.0.1 ${SUBDOMAIN}.localhost.lan" | sudo tee -a /etc/hosts
+echo "127.0.0.1 ${SUBDOMAIN}.localhost" | sudo tee -a /etc/hosts
 
 service postgresql start
 service redis-server start

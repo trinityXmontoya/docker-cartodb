@@ -13,15 +13,15 @@ How to build the container:
 --------------
 
 ```
-git clone https://github.com/fleu42/docker-cartodb.git
-docker build -t="fleu42/docker-cartodb" docker-cartodb/
+git clone https://github.com/jbuonagurio/docker-cartodb.git
+docker build -t="jbuonagurio/docker-cartodb" docker-cartodb/
 ```
 
 How to run the container:
 --------------
 
 ```
-docker run -t -i fleu42/docker-cartodb -p 3000:3000 /bin/bash
+docker run -t -i -p 3000:3000 jbuonagurio/docker-cartodb /bin/bash
 ```
 
 You might need to add dev.localhost to your hosts file.
