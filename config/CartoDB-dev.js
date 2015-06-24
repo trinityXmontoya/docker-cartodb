@@ -59,3 +59,6 @@ module.exports.health = {
     username: 'development',
     query: 'select 1'
 };
+module.exports.enabledFeatures = {
+	onTileErrorStrategy: true
+};
